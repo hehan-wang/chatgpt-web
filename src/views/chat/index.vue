@@ -482,9 +482,21 @@ onUnmounted(() => {
           :class="[isMobile ? 'p-2' : 'p-4']"
         >
           <template v-if="!dataSources.length">
-            <div class="flex items-center justify-center mt-4 text-center text-neutral-300">
-              <SvgIcon icon="ri:bubble-chart-fill" class="mr-2 text-3xl" />
-              <span>Aha~</span>
+            <!-- 加入付款二维码和维护说明 -->
+            <div class="flex flex-col items-center mt-4">
+              <div class="flex justify-center items-center space-x-4">
+                <div class="w-48 h-48 bg-gray-200">
+                  <!-- 请将以下图片 src 替换为你的二维码图片链接 -->
+                  <img src="https://s1.ax1x.com/2023/04/09/ppH2mZV.md.jpg" alt="微信维" class="w-full h-full object-contain">
+                </div>
+                <div class="w-48 h-48 bg-gray-200">
+                  <!-- 请将以下图片 src 替换为另一个图片链接 -->
+                  <img src="https://s1.ax1x.com/2023/04/09/ppH2pa8.jpg" alt="支付宝" class="w-full h-full object-contain">
+                </div>
+              </div>
+              <p class="mt-4 text-center text-neutral-300">
+                维护不易，服务器和接口调用都需要成本。如果您觉得这个项目对您有帮助，请我喝杯咖啡😊。
+              </p>
             </div>
           </template>
           <template v-else>
