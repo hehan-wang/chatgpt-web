@@ -487,11 +487,11 @@ onUnmounted(() => {
               <div class="flex justify-center items-center space-x-4">
                 <div class="w-48 h-48 bg-gray-200">
                   <!-- 请将以下图片 src 替换为你的二维码图片链接 -->
-                  <img src="https://s1.ax1x.com/2023/04/09/ppH2mZV.md.jpg" alt="微信维" class="w-full h-full object-contain">
+                  <img src="https://s2.loli.net/2023/04/09/zDUrxb3qKXWSsvF.jpg" alt="微信" class="w-full h-full object-contain">
                 </div>
                 <div class="w-48 h-48 bg-gray-200">
                   <!-- 请将以下图片 src 替换为另一个图片链接 -->
-                  <img src="https://s1.ax1x.com/2023/04/09/ppH2pa8.jpg" alt="支付宝" class="w-full h-full object-contain">
+                  <img src="https://s2.loli.net/2023/04/09/3yCjKpSPcmg8irn.jpg" alt="支付宝" class="w-full h-full object-contain">
                 </div>
               </div>
               <p class="mt-4 text-center text-neutral-300">
