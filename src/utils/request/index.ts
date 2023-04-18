@@ -30,7 +30,8 @@ function http<T = any>(
 
     if (res.data.status === 'Unauthorized') {
       authStore.removeToken()
-      window.location.reload()
+      // window.location.reload()
+      authStore.setDirectAccess(false)
     }
 
     return Promise.reject(res.data)

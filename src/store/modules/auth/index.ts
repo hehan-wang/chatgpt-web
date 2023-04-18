@@ -10,12 +10,15 @@ interface SessionResponse {
 
 export interface AuthState {
   token: string | undefined
+  // 没登录的时候为false，可以访问5次，登录后为true，不限制
+  directAccess: boolean | true
   session: SessionResponse | null
 }
 
 export const useAuthStore = defineStore('auth-store', {
   state: (): AuthState => ({
     token: getToken(),
+    directAccess: true,
     session: null,
   }),
 
@@ -37,8 +40,13 @@ export const useAuthStore = defineStore('auth-store', {
       }
     },
 
+    setDirectAccess(directAccess: boolean) {
+      this.directAccess = directAccess
+    },
+
     setToken(token: string) {
       this.token = token
+      this.setDirectAccess(false)
       setToken(token)
     },
 
